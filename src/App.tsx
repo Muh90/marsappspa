@@ -6,18 +6,28 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {Nasa}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Nasa/>
+        <button type="button">Click</button>
       </header>
     </div>
   );
+}
+
+type InfoProps = {
+    title: string;
+    p1: string;
+}
+
+const Info: React.FC<InfoProps> = ({
+   title,
+   p1
+}) => {
+    return (
+        <body>
+        <h1>{title}</h1>
+        <p>{p1}</p>
+        </body>
+    );
 }
 
 export default App;

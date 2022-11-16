@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Nasa from "./nasa_page";
 
@@ -7,26 +7,20 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Nasa/>
-        <button type="button">Click</button>
+        <ButtonClicks/>
       </header>
     </div>
   );
 }
 
-type InfoProps = {
-    title: string;
-    p1: string;
-}
+type ButtonClicksProps = {}
 
-const Info: React.FC<InfoProps> = ({
-   title,
-   p1
-}) => {
+const ButtonClicks: React.FC<ButtonClicksProps> = ({}) => {
+    const [count, setCount] = useState(0);
     return (
-        <body>
-        <h1>{title}</h1>
-        <p>{p1}</p>
-        </body>
+        <div>
+            <button type="button" onClick={() => setCount((count + 1))}>Clicked {count} times</button>
+        </div>
     );
 }
 

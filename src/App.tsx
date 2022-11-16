@@ -1,15 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Nasa from "./nasa_page";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          The code in <code>src/App.tsx</code> has been edited.
-        </p>
+        <Nasa title = "New title"/>
         <a
           className="App-link"
           href="https://reactjs.org"
